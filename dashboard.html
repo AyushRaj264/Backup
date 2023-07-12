@@ -1,0 +1,30 @@
+<h2>Dashboard</h2>
+
+<form >
+<div id="container">
+    <img src="avatar.jpg" class="avatar">
+    <h2>Type of Quiz</h2>
+    <!-- <label for="Category">Select Category:</label> -->
+    <select class="inputs" name="Category" id="">
+        <option value="Entertainment">Entertainment</option>
+        <option value="General Knowledge">General Knowledge</option>
+        <option value="Sports">Sports</option>
+        <option value="Mythology">Mythology</option>
+    </select>
+    <br>
+    <!-- <label for="Difficulty">Select Difficulty:</label> -->
+    <select class="inputs" name="Difficulty" id="">
+        <option value="Easy">Easy</option>
+        <option value="Medium">Medium</option>
+        <option value="Hard">Hard</option>
+
+    </select>
+    <br>
+    <!-- <label for="Type">Select Type:</label> -->
+    <select class="inputs" name="Type" id="">
+        <option value="Multiple">Multiple</option>
+        <option value="TrueFalse">True-False</option>
+    </select>
+    <button ng-click="StartQuiz()" class="btn" type="button">Start Quiz</button>
+</div>
+</form>

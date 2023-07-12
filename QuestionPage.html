@@ -1,0 +1,22 @@
+
+<div id="Quiz-div">
+<h2>Questions:{{total}}</h2>
+
+<p>Score:{{score}}</p>
+    <!-- <div id="Question-div" >Q. {{question}}</div>
+    <div class="answers" ng-click="choiceclicked(choice1)" ng-class='{"highlight":isClicked,"incorrect":!isClicked}'>a.{{choice1}}</div>
+    <div class="answers" ng-click="choiceclicked(choice2)" ng-class='{"highlight":isClicked,"incorrect":!isClicked}'>b. {{choice2}}</div>
+    <div class="answers" ng-click="choiceclicked(choice3)" ng-class='{"highlight":isClicked,"incorrect":!isClicked}'>c. {{choice3}}</div>
+    <div class="answers" ng-click="choiceclicked(choice4)" ng-class='{"highlight":isClicked,"incorrect":!isClicked}'>d. {{choice4}}</div> -->
+
+    <div ng-repeat="question in questions">
+        <h3 id="Question-div">{{ question.question }}</h3>
+        <ul class="no-bullets">
+          <li ng-repeat="option in question.options">
+            <input type="radio" name="answer{{$parent.$index}}" ng-value="option" ng-model="question.selectedOption" >
+            {{ option }}
+          </li>
+        </ul>
+      </div>
+      <button class="btn" ng-click="SubmitQuiz()">Submit Quiz</button>
+</div>
